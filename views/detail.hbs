@@ -1,29 +1,33 @@
-<div class="container">
-  <h1 class="mt-3">Profile</h1>
-  <div class="mb-3 row">
-    <label for="firstname" class="col-sm-2 col-form-label">Firstname</label>
-    <div class="col-sm-10">
-      <input
-        type="text"
-        class="form-control-plaintext"
-        id="firstname"
-        name="firstname"
-        value="{{User.firstName}}"
-        readonly
-      />
+<form action="/logout" method="POST">
+  <div class="container">
+    <h1 class="mt-3">Profile</h1>
+    <div class="mb-3 row">
+      <label for="firstname" class="col-sm-2 col-form-label">Firstname</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control-plaintext"
+          id="firstname"
+          name="firstname"
+          value="{{User.firstName}}"
+          readonly
+        />
+      </div>
     </div>
-  </div>
-  <div class="mb-3 row">
-    <label for="email" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input
-        type="text"
-        class="form-control-plaintext"
-        id="email"
-        name="email"
-        value="{{User.email}}"
-        readonly
-      />
+    <div class="mb-3 row">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control-plaintext"
+          id="email"
+          name="email"
+          value="{{User.email}}"
+          readonly
+        />
+      </div>
+
     </div>
+    <button class="btn btn-warning">Logout</button>
   </div>
-</div>
+</form>

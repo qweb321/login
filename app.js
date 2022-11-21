@@ -42,6 +42,11 @@ app.get("/detail", (req, res) => {
   res.render("detail", { User: Edituser });
 });
 
+app.post("/logout", (req, res) => {
+  res.clearCookie("user");
+  res.render("logout");
+});
+
 app.listen(port, () =>
   console.log(`app is running on http://localhost:${port}`)
 );

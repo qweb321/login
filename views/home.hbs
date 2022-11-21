@@ -1,0 +1,40 @@
+<form action="/" method="POST">
+  <div class="container text-center mt-3" style="width: 50vw">
+    <h1 class="mb-4">Account Login</h1>
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control form-control-lg"
+        id="useremail"
+        name="useremail"
+        placeholder="Email"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="password"
+        class="form-control form-control-lg"
+        id="password"
+        name="password"
+        placeholder="password"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-info fs-4">Login</button>
+    {{#if error}}
+      <div
+        class="alert alert-warning alert-dismissible fade show mt-3"
+        role="alert"
+      >
+        <strong>{{error}}</strong>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+    {{/if}}
+  </div>
+</form>

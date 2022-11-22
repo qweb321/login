@@ -29,6 +29,14 @@ app.post("/", (req, res) => {
   }
 });
 
+app.get("/welcome", (req, res) => {
+  // if user don't login, it won't show page
+  if (!Object.keys(req.cookies).length) {
+    return res.redirect("/");
+  }
+  res.render("welcome", { Name: req.cookies.user });
+});
+
 app.get("/detail", (req, res) => {
   let Edituser = "";
   if (!Object.keys(req.cookies).length) {

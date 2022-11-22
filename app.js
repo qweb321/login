@@ -13,6 +13,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
+  // if user already login, login page won't show
+  if (Object.keys(req.cookies).length) {
+    return res.redirect("/welcome");
+  }
   res.render("home");
 });
 

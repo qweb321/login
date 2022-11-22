@@ -13,15 +13,9 @@
   </head>
   <body>
     <header>
-      {{! <nav class="navbar navbar-dark bg-secondary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">Login</a>
-          <a class="navbar-brand" href="/detail">Profile</a>
-        </div>
-      </nav> }}
       <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">Login</a>
+          <a class="navbar-brand" href="/" onclick="login()">Login</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -54,6 +48,12 @@
       function showAlert() { 
         if (!Object.keys(document.cookie).length) { 
           alert("Please login first")
+        }
+      }
+
+      function login() {
+        if (Object.keys(document.cookie).length) {
+          alert('You already login!')
         }
       }
     </script>

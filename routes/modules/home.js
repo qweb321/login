@@ -32,16 +32,16 @@ router.get("/welcome", (req, res) => {
 });
 
 router.get("/detail", (req, res) => {
-  let Edituser = "";
+  let detailUser = "";
   if (!Object.keys(req.cookies).length) {
     return res.redirect("/");
   }
   for (const user of users) {
     if (user.firstName === req.cookies.user) {
-      Edituser = user;
+      detailUser = user;
     }
   }
-  res.render("detail", { User: Edituser });
+  res.render("detail", { User: detailUser });
 });
 
 router.post("/logout", (req, res) => {
